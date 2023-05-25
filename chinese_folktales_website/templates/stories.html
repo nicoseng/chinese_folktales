@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+<body id="page-top" xmlns="http://www.w3.org/1999/html" class="test">
+<div class="card-container">
+    {% for story in story_table %}
+    <div class="card">
+        <div class="card-imgBox">
+            <img class="card-img" src="{{story.bg_image}}">
+        </div>
+        <div class="card-content">
+            <a href="{% url 'story_detail' story.story_id %}"><h2>{{story.title}}</h2></a>
+            <h4>{{story.level_id.name}}</h4>
+            <p>{{story.description}}</p>
+            <form method="POST" action="{% url 'add_favorite' story.story_id %}">
+                {% csrf_token %}
+                <input class="favorite-btn" type="submit" name="favorite"
+                       value="Dans mes favoris">
+<!--                <input class="data_submit" type="hidden" name="story_selected" value="{{story.story_id}}">-->
+            </form>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

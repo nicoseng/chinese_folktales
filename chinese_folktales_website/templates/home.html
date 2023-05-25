@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="content">
+    <div class="textBox">
+        <h2>Des petites histoires en mandarin pour tous ! </h2>
+        <p> Vous apprenez le mandarin et vous souhaitez progresser de façon ludique et agréable ?
+            Apprenez comme les petits !
+            Les histoires proposées sont en mandarin et racontées par des locuteurs natifs.
+            Idéales pour les enfants... comme pour les grands !
+        </p>
+        <a href="{% url 'stories' %}">En savoir plus</a>
+    </div>
+    <div class="imgBox">
+        <img src="{% static 'images/chinese_rabbit.png' %}" class="chinese_logo">
+    </div>
+</div>
+<ul class="sci">
+    <li><a href="https://fr-fr.facebook.com/"><img src="{% static 'images/facebook.png' %}"></a></li>
+    <li><a href="https://www.instagram.com/?hl=fr"><img src="{% static 'images/instagram.png' %}"></a></li>
+    <li><a href="https://twitter.com/?lang=fr"><img src="{% static 'images/twitter.png' %}"></a></li>
+    <li><a href="https://open.spotify.com/?"><img src="{% static 'images/spotify.png' %}"></a></li>
+</ul>
+{% endblock %}

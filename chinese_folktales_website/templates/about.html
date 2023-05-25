@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+<body id="page-top" xmlns="http://www.w3.org/1999/html" class="test">
+<div class="content">
+    <div class="textBox">
+        <h2>Il était une fois...</h2>
+        <p> ...un petit garçon passionné par les langues.
+            À travers ses études puis ses expériences professionnelles dans l'enseignement, ce petit garçon voulait en particulier combiner sa passion pour la langue chinoise et la programmation.
+            Son ambition était ainsi toute trouvée : Utiliser les nouvelles technologies pour enseigner les langues.
+            À travers de petites histoires accessibles dépeignant quelques saveurs choisies de la langue chinoise et de sa culture, il espérait ainsi modestement être arrivé à ce but : apprendre de façon ludique et simple comme les enfants.
+        </p>
+    </div>
+    <div class="imgBox">
+        <img src="{% static 'images/tiger.png' %}" class="tiger_about">
+    </div>
+</div>
+{% endblock %}
