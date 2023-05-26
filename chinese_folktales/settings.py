@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "165.232.100.227", "chinese-folktales.com"]
+ALLOWED_HOSTS = ["127.0.0.1", config('IP_ADDRESS'), "chinese-folktales.com"]
 
 CSRF_TRUSTED_ORIGINS = ["https://chinese-folktales.com"]
 
