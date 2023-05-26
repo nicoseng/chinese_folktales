@@ -95,7 +95,7 @@ class StoryImporter:
     @staticmethod
     def open_textfile(textfile_name):
         if os.environ.get("ENV", "development") == "production":
-            textfile_basepath = '/home/nsengmany/chinese_folktales/chinese_folktales_website/stories/texts/'
+            textfile_basepath = '/home/nicoseng/chinese_folktales/chinese_folktales_website/stories/texts/'
         else:
             textfile_basepath = '/Users/nicolassengmany/Desktop/Python/projets_personnels/chinese_folktales/chinese_folktales_website/stories/texts/'
         story_file = textfile_basepath + textfile_name
